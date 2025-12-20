@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando | Creative Technologist</title>
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    
+    <!-- Bibliotecas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Camada 3D Canvas (Ambiental) -->
+    <canvas id="webgl"></canvas>
+
+    <!-- Camada de Conteúdo Principal -->
+    <main class="app">
+        
+        <!-- Cabeçalho Fixo -->
+        <header class="header">
+            <a href="#" class="logo">Fernando.</a>
+            <nav class="nav">
+                <a href="#work" class="nav-link">Projetos</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+        </header>
+
+        <!-- Seção 1: Hero (Rolagem Vertical) -->
+        <!-- Seção 1: Hero (Rolagem Vertical) -->
+        <section class="section hero" data-theme="light">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Vamos construir algo <br>
+                    <span class="text-gradient">memorável?</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transformo ideias complexas em experiências digitais <br>
+                    fluidas, imersivas e impactantes.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-pill magnetic-btn btn-primary">Iniciar Projeto</a>
+                    <a href="#work" class="btn-link magnetic-btn">Ver Projetos</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>Role para explorar</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Projetos (Rolagem Horizontal - Pin) -->
+        <div class="horizontal-scroll-wrapper" id="work">
+            <div class="horizontal-container">
+                
+                <!-- Intro Projetos -->
+                <section class="panel project-intro" data-theme="dark">
+                    <div class="panel-content">
+                        <h2 class="display-title">Casos <br>Selecionados</h2>
+                        <p class="text-lg">Uma curadoria de trabalhos focados em performance e estética.</p>
+                    </div>
+                </section>
+
+                <!-- Projeto 1 -->
+                <section class="panel project-card" data-img="proj1">
+                    <div class="card-glass">
+                        <span class="card-num">01</span>
+                        <h3 class="card-title">Fagulha</h3>
+                        <div class="card-tags">
+                            <span>React</span><span>Node</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projeto 2 -->
+                <section class="panel project-card" data-img="proj2">
+                    <div class="card-glass">
+                        <span class="card-num">02</span>
+                        <h3 class="card-title">Oniria</h3>
+                        <div class="card-tags">
+                            <span>Python</span><span>TensorFlow</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projeto 3 -->
+                <section class="panel project-card" data-img="proj3">
+                    <div class="card-glass">
+                        <span class="card-num">03</span>
+                        <h3 class="card-title">ERP Gestor Inteligente</h3>
+                        <div class="card-tags">
+                            <span>Three.js</span><span>Vue</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Seção 3: Sobre (Revelação de Foto) -->
+        <section id="about" class="section about" data-theme="blue">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <span class="kicker">Quem sou eu</span>
+                    <h2 class="display-title">Fernando</h2>
+                    <p class="text-lg">
+                        Especialista em unir a lógica do código com a fluidez da arte. 
+                        Acredito que interfaces digitais devem ser tão naturais quanto interações físicas.
+                    </p>
+                    <a href="#contact" class="btn-pill magnetic-btn">Vamos Conversar</a>
+                </div>
+                <!-- Máscara da Imagem -->
+                <div class="about-visual">
+                    <div class="image-mask">
+                        <img src="assets/img/fernando.jpeg" alt="Fernando" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Contato (Ambiente de Captação) -->
+        <footer class="section contact-section" id="contact">
+            <div class="container contact-grid">
+                
+                <!-- Coluna 1: Contexto e CTA -->
+                <div class="contact-info">
+                    <span class="kicker">Contato</span>
+                    <h2 class="display-title">Vamos construir algo <span class="text-gradient">memorável</span>?</h2>
+                    <p class="text-lg">
+                        Estou disponível para novos projetos e colaborações. Se você busca uma experiência digital única, mande um oi.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:dev.lombardo@gmail.com" class="method-row">
+                            <span class="method-label">Email</span>
+                            <span class="method-value">dev.lombardo@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/5511937748884" target="_blank" class="method-row">
+                            <span class="method-label">WhatsApp</span>
+                            <span class="method-value">+55 11 93774-8884</span>
+                        </a>
+                    </div>
+
+                    <div class="socials-list">
+                        <a href="https://github.com/loombardo-99" target="_blank" class="magnetic-btn btn-icon">GH</a>
+                        <a href="#" target="_blank" class="magnetic-btn btn-icon">LI</a>
+                        <a href="#" target="_blank" class="magnetic-btn btn-icon">IG</a>
+                    </div>
+                    
+                    <span class="copyright">© 2025 Fernando Lombardo.</span>
+                </div>
+
+                <!-- Coluna 2: Formulário -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="glass-form" action="mailto:dev.lombardo@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Conte sobre seu projeto..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-pill magnetic-btn btn-full">
+                            <span class="btn-text">Enviar Mensagem</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Project Modal Overlay -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="modal-header">
+                <span class="modal-number">01</span>
+                <h2 class="modal-title">Nome do Projeto</h2>
+                <div class="modal-tags">
+                    <!-- Tags injetadas via JS -->
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <!-- Imagens injetadas via JS -->
+                </div>
+                
+                <div class="modal-info">
+                    <p class="modal-description">Descrição do projeto aqui.</p>
+                    
+                    <div class="modal-links">
+                        <a href="#" target="_blank" class="btn-pill btn-small modal-link-code">GitHub</a>
+                        <a href="#" target="_blank" class="btn-pill btn-small modal-link-live">Live Preview</a>
+                    </div>
+
+                    <div class="modal-contact-info">
+                        <span>Interessado neste projeto?</span>
+                        <a href="https://wa.me/5511937748884" class="contact-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Vamos conversar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
