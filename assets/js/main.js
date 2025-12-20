@@ -398,6 +398,17 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault(); // Impede refresh para animação
 
+            // Dados do formulário
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
+            // Construir link Mailto
+            const subject = `Contato Portfólio: ${name}`;
+            const body = `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`;
+            const mailtoLink = `mailto:dev.lombardo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
             const btnTextSpan = submitBtn.querySelector('.btn-text');
             const icon = submitBtn.querySelector('svg');
 
@@ -407,6 +418,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1. Timeline de Animação
             const tl = gsap.timeline({
                 onComplete: () => {
+                    // Abrir cliente de email (Ação real)
+                    window.location.href = mailtoLink;
+
                     // Reset após animação (apenas para demonstração)
                     setTimeout(() => {
                         // Reset visual
@@ -419,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         // Aqui você mostraria uma div de "Sucesso"
                         const successMsg = document.createElement('div');
-                        successMsg.innerHTML = '✨ Mensagem Enviada!';
+                        successMsg.innerHTML = '✨ Redirecionando para seu email...';
                         successMsg.style.color = '#ffd700';
                         successMsg.style.fontSize = '1.2rem';
                         successMsg.style.textAlign = 'center';
@@ -442,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             submitBtn.style.pointerEvents = 'all';
                         }, 4000);
 
-                    }, 200); // 200ms de delay antes do feedback de texto
+                    }, 500); // Delay
                 }
             });
 
