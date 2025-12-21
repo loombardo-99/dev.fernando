@@ -617,153 +617,213 @@ h3 {
 /* =========================================
    CONTACT SECTION
    ========================================= */
+/* =========================================
+   CONTACT SECTION (Google Material Style)
+   ========================================= */
 .contact-section {
-    padding: 10rem 0;
-    min-height: 80vh;
+    padding: 8rem 0;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 2;
+    /* Clean background gradient */
+    background: radial-gradient(circle at bottom right, rgba(20, 20, 20, 1) 0%, rgba(5, 5, 5, 1) 60%);
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 6rem;
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* Info Column */
 .contact-info .display-title {
     font-size: 3.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.1;
+    font-weight: 500;
 }
 
 .contact-methods {
-    margin: 4rem 0;
+    margin: 3rem 0;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    gap: 1rem;
 }
 
+/* Google-style Chips */
 .method-row {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
     text-decoration: none;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-md);
-    transition: all 0.3s ease;
+    padding: 1rem 1.5rem;
+
+    background: rgba(255, 255, 255, 0.05);
+    /* Surface Container High */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    /* Material Medium Shape */
+
+    transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+    cursor: pointer;
 }
 
 .method-row:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .method-label {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    opacity: 0.6;
-    margin-bottom: 0.5rem;
+    display: none;
+    /* Cleaner look: hide label, rely on icon/text */
 }
 
 .method-value {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.2rem;
-    color: var(--color-light);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
 }
 
+/* Icons within chips (pseudo-element for visual hint) */
+.method-row::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-light, #fff);
+    opacity: 0.5;
+    transition: background 0.3s;
+}
+
+.method-row:hover::before {
+    background: var(--accent-color);
+    opacity: 1;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Social Icons (Floating) */
 .socials-list {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 4rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 56px;
+    /* Larger tap target */
+    height: 56px;
+    border-radius: 18px;
+    /* Squircle */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-light);
+    color: var(--text-color);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .btn-icon:hover {
-    background: var(--color-light);
-    color: var(--color-dark);
-    transform: scale(1.1);
+    background: #fff;
+    color: #000;
+    transform: rotate(10deg) scale(1.1);
+    border-color: #fff;
 }
 
 .copyright {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     opacity: 0.4;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
 }
 
-/* Form Column */
+/* Form Column (Material Surface) */
 .contact-form-wrapper {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 3rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 30, 0.4);
+    /* Darker surface */
+    padding: 3.5rem;
+    border-radius: 32px;
+    /* Material Large Shape */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .glass-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .form-group {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.5rem;
 }
 
 .form-group label {
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-left: 0.5rem;
 }
 
 .form-group input,
 .form-group textarea {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    /* Thicker subtle border */
+    border-radius: 12px;
     padding: 1.2rem;
-    color: var(--color-light);
+    color: #fff;
     font-family: var(--font-body);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    resize: vertical;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: var(--accent-color);
+    /* Highlight color */
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    opacity: 0.3;
 }
 
 .btn-full {
     width: 100%;
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
+    margin-top: 1.5rem;
+    background: #fff;
+    color: #000;
     justify-content: center;
     gap: 1rem;
+    padding: 1.4rem;
+    font-size: 1.1rem;
+}
+
+.btn-full:hover {
+    background: #f0f0f0;
+    transform: scale(1.02);
 }
 
 /* =========================================
@@ -775,7 +835,7 @@ h3 {
     .header {
         padding: 1.5rem 2rem;
     }
-    
+
     .section {
         padding: 0 2rem;
     }
@@ -783,12 +843,12 @@ h3 {
     .hero-title {
         font-size: 4rem;
     }
-    
+
     .card-glass {
         width: 90%;
         padding: 3rem;
     }
-    
+
     .card-title {
         font-size: 3rem;
     }
@@ -796,13 +856,15 @@ h3 {
 
 /* Mobile Devices (Max 768px) */
 @media (max-width: 768px) {
+
     /* Global Adjustments */
     :root {
         --radius-lg: 24px;
     }
 
     .display-title {
-        font-size: 2.5rem !important; /* Force resize */
+        font-size: 2.5rem !important;
+        /* Force resize */
     }
 
     .text-lg {
@@ -820,7 +882,8 @@ h3 {
         flex-direction: column;
         gap: 1rem;
         padding: 1.5rem;
-        background: rgba(0,0,0,0.8); /* Better visibility */
+        background: rgba(0, 0, 0, 0.8);
+        /* Better visibility */
         backdrop-filter: blur(10px);
     }
 
@@ -832,7 +895,8 @@ h3 {
     /* Hero Section */
     .hero {
         padding-top: 8rem;
-        align-items: flex-start; /* Move up slightly */
+        align-items: flex-start;
+        /* Move up slightly */
     }
 
     .hero-title {
@@ -845,7 +909,8 @@ h3 {
         gap: 1rem;
     }
 
-    .btn-primary, .btn-link {
+    .btn-primary,
+    .btn-link {
         width: 100%;
         text-align: center;
     }
@@ -870,7 +935,8 @@ h3 {
     }
 
     .project-card {
-        transform: none !important; /* Disable 3D tilt on touch */
+        transform: none !important;
+        /* Disable 3D tilt on touch */
     }
 
     .card-glass {
@@ -932,13 +998,14 @@ h3 {
     }
 
     .modal-gallery {
-        grid-template-columns: 1fr; /* Single column images */
+        grid-template-columns: 1fr;
+        /* Single column images */
     }
 
     .modal-number {
         font-size: 4rem;
     }
-    
+
     .modal-close-btn {
         top: 1rem;
         right: 1rem;
