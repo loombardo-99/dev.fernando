@@ -200,19 +200,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------------------------------------------
     // 2. Rolagem Horizontal (ScrollTrigger)
     // ---------------------------------------------
+    // ---------------------------------------------
+    // 2. Rolagem Horizontal (ScrollTrigger) - Apenas Desktop
+    // ---------------------------------------------
     const sections = gsap.utils.toArray(".panel");
-    if (sections.length > 0) {
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".horizontal-scroll-wrapper",
-                pin: true,
-                scrub: 1,
-                end: () => "+=" + document.querySelector(".horizontal-scroll-wrapper").offsetWidth
+
+    // Usar matchMedia para aplicar apenas em telas maiores que 768px
+    ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
+            if (sections.length > 0) {
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".horizontal-scroll-wrapper",
+                        pin: true,
+                        scrub: 1,
+                        end: () => "+=" + document.querySelector(".horizontal-scroll-wrapper").offsetWidth
+                    }
+                });
             }
-        });
-    }
+        }
+    });
 
     // ---------------------------------------------
     // 3. Botões Magnéticos
@@ -289,17 +298,17 @@ document.addEventListener('DOMContentLoaded', () => {
             number: '02',
             tags: ['Python', 'TensorFlow', 'OpenCV'],
             images: [
-                'assets/img/project-ai.png',
-                'assets/img/Image_fx (11).png',
-                'assets/img/Image_fx (5).png',
-                'assets/img/Image_fx (6).png'
+                'assets/img/oniria.png',
+                'assets/img/oniria1.png',
+                'assets/img/oniria2.png',
+                'assets/img/oniria3.png'
             ],
             description: 'Sistema de visão computacional para análise de sentimentos em tempo real em espaços públicos. Utiliza redes neurais profundas para processar fluxos de vídeo e gerar mapas de calor emocionais, auxiliando no planejamento urbano e segurança.',
             github: 'https://github.com/loombardo-99',
-            live: '#'
+            live: 'https://loombardo-99.github.io/OnirIA/'
         },
         'proj3': {
-            title: 'ERP Gestor',
+            title: 'ERP Gestor Inteligente',
             number: '03',
             tags: ['Three.js', 'Vue.js', 'Firebase'],
             images: [
@@ -365,7 +374,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
     if (modalOverlay) modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) closeModal(); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+                closeLightbox();
+            } else if (modalOverlay && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        }
+    });
+
+
+    // ---------------------------------------------
+    // LIGHTBOX: Visualização de Imagem em Tela Cheia
+    // ---------------------------------------------
+
+    // Cria elementos do Lightbox dinamicamente
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.id = 'lightbox-overlay';
+
+    const lightboxImg = document.createElement('img');
+    lightboxImg.id = 'lightbox-img';
+
+    const lightboxClose = document.createElement('button');
+    lightboxClose.id = 'lightbox-close';
+    lightboxClose.innerHTML = '&times;';
+
+    lightboxOverlay.appendChild(lightboxImg);
+    lightboxOverlay.appendChild(lightboxClose);
+    document.body.appendChild(lightboxOverlay);
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightboxOverlay.classList.add('active');
+    }
+
+    function closeLightbox() {
+        lightboxOverlay.classList.remove('active');
+        // Limpar src após animação para evitar flash na próxima abertura
+        setTimeout(() => { lightboxImg.src = ''; }, 300);
+    }
+
+    // Fechar ao clicar no overlay ou botão
+    lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) closeLightbox();
+    });
+
+    // Delegação de eventos para imagens dentro do modal (pois são criadas dinamicamente)
+    if (mGallery) {
+        mGallery.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-img')) {
+                openLightbox(e.target.src);
+            }
+        });
+    }
 
 
     // ---------------------------------------------

@@ -15,7 +15,7 @@
 
     <!-- Estilos -->
     <!-- Estilos -->
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
 
     <!-- Bibliotecas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
     <!-- Camada 3D Canvas (Ambiental) -->
     <canvas id="webgl"></canvas>
 
@@ -33,7 +32,7 @@
 
         <!-- Cabeçalho Fixo -->
         <header class="header">
-            <a href="#" class="logo">Fernando.</a>
+            <a href="#" class="logo">dev.lombardo</a>
             <nav class="nav">
                 <a href="#work" class="nav-link">Projetos</a>
                 <a href="#about" class="nav-link">Sobre</a>
@@ -41,25 +40,27 @@
             </nav>
         </header>
 
-        <!-- Seção 1: Hero (Rolagem Vertical) -->
-        <!-- Seção 1: Hero (Rolagem Vertical) -->
-        <section class="section hero" data-theme="light">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Vamos construir algo <br>
-                    <span class="text-gradient">memor&aacute;vel?</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Transformo ideias complexas em experiências digitais <br>
-                    fluidas, imersivas e impactantes.
-                </p>
 
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-pill magnetic-btn btn-primary">Iniciar Projeto</a>
-                    <a href="#work" class="btn-link magnetic-btn">Ver Projetos</a>
+        <!-- Seção 3: Sobre (Revelação de Foto) -->
+        <section id="about" class="section about" data-theme="blue">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <span class="kicker">Quem sou eu</span>
+                    <h2 class="display-title">Fernando</h2>
+                    <p class="text-lg">
+                        Especialista em unir a lógica do código com a fluidez da arte.
+                        Acredito que interfaces digitais devem ser tão naturais quanto interações físicas.
+                    </p>
+
+                    <a href="#contact" class="btn-pill magnetic-btn">Vamos Conversar</a>
+                </div>
+                <!-- Máscara da Imagem -->
+                <div class="about-visual">
+                    <div class="image-mask">
+                        <img src="assets/img/fernando.jpeg" alt="Fernando" class="profile-photo">
+                    </div>
                 </div>
             </div>
-
             <div class="scroll-indicator">
                 <span>Role para explorar</span>
                 <div class="line"></div>
@@ -114,26 +115,7 @@
             </div>
         </div>
 
-        <!-- Seção 3: Sobre (Revelação de Foto) -->
-        <section id="about" class="section about" data-theme="blue">
-            <div class="container about-grid">
-                <div class="about-text">
-                    <span class="kicker">Quem sou eu</span>
-                    <h2 class="display-title">Fernando</h2>
-                    <p class="text-lg">
-                        Especialista em unir a lógica do código com a fluidez da arte.
-                        Acredito que interfaces digitais devem ser tão naturais quanto interações físicas.
-                    </p>
-                    <a href="#contact" class="btn-pill magnetic-btn">Vamos Conversar</a>
-                </div>
-                <!-- Máscara da Imagem -->
-                <div class="about-visual">
-                    <div class="image-mask">
-                        <img src="assets/img/fernando.jpeg" alt="Fernando" class="profile-photo">
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Seção 4: Contato (Ambiente de Captação) -->
         <footer class="section contact-section" id="contact">
@@ -170,34 +152,7 @@
                 </div>
 
                 <!-- Coluna 2: Formulário -->
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="glass-form">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required placeholder="Seu nome">
-                        </div>
 
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="4" required
-                                placeholder="Conte sobre seu projeto..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-pill magnetic-btn btn-full">
-                            <span class="btn-text">Enviar Mensagem</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
 
             </div>
         </footer>
