@@ -383,6 +383,54 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             github: 'https://github.com/loombardo-99',
             live: '#'
+        },
+        'proj4': {
+            title: 'Novo Projeto',
+            number: '04',
+            tags: ['Em Breve'],
+            images: ['assets/img/fagulha1.png'],
+            description: '',
+            overview: 'Projeto em fase inicial de desenvolvimento.',
+            problem: 'Descrição do desafio.',
+            solution: 'Descrição da solução.',
+            features: [
+                'Funcionalidade 1',
+                'Funcionalidade 2'
+            ],
+            github: '#',
+            live: '#'
+        },
+        'proj5': {
+            title: 'Novo Projeto',
+            number: '05',
+            tags: ['Em Breve'],
+            images: ['assets/img/fagulha1.png'],
+            description: '',
+            overview: 'Projeto em fase inicial de desenvolvimento.',
+            problem: 'Descrição do desafio.',
+            solution: 'Descrição da solução.',
+            features: [
+                'Funcionalidade 1',
+                'Funcionalidade 2'
+            ],
+            github: '#',
+            live: '#'
+        },
+        'proj6': {
+            title: 'Novo Projeto',
+            number: '06',
+            tags: ['Em Breve'],
+            images: ['assets/img/fagulha1.png'],
+            description: '',
+            overview: 'Projeto em fase inicial de desenvolvimento.',
+            problem: 'Descrição do desafio.',
+            solution: 'Descrição da solução.',
+            features: [
+                'Funcionalidade 1',
+                'Funcionalidade 2'
+            ],
+            github: '#',
+            live: '#'
         }
     };
 
