@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'proj1': {
             title: 'Fagulha',
             number: '01',
-            tags: ['React', 'Node.js', 'PostgreSQL'],
+            tags: ['Node.js', 'Gemini AI', 'Ollama', 'Hybrid'],
             images: [
                 'assets/img/fagulha1.png',
                 'assets/img/fagulha2.png',
@@ -292,16 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 'assets/img/fagulha6.png',
                 'assets/img/fagulha7.png'
             ],
-            description: 'Uma plataforma inovadora para gestão de ideias. (Placeholder para futura atualização)',
-            overview: 'Uma plataforma inovadora para gestão de ideias e inovação corporativa.',
-            problem: 'Empresas muitas vezes perdem grandes ideias por falta de um canal estruturado para colaboradores compartilharem sugestões.',
-            solution: 'O Fagulha gamifica o processo de inovação, permitindo submissão, votação e desenvolvimento de projetos internos.',
+            description: '', // Legacy
+            overview: 'Assistente visual de IA híbrido e acessível que vê, ouve e fala, funcionando online e offline.',
+            problem: 'Falta de acesso a IA em áreas remotas (sem internet) e necessidade de ferramentas descritivas para pessoas com deficiência visual.',
+            solution: 'Um assistente que alterna automaticamente entre IA potente na nuvem (Gemini 2.0) e IA local leve (Ollama/Moondream), garantindo disponibilidade total.',
             features: [
-                'Gamificação e recompensas',
-                'Fluxo de aprovação customizável',
-                'Dashboard de métricas de inovação'
+                'Análise Multimodal (Visão, Voz, Texto)',
+                'Modo Híbrido (Gemini Online / Ollama Offline)',
+                'Acessibilidade com foco em áudio'
             ],
-            github: 'https://github.com/loombardo-99',
+            github: 'https://github.com/loombardo-99/Fagulha-AI-Assistant',
             live: '#'
         },
         'proj2': {
