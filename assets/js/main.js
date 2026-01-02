@@ -284,40 +284,103 @@ document.addEventListener('DOMContentLoaded', () => {
             number: '01',
             tags: ['React', 'Node.js', 'PostgreSQL'],
             images: [
-                'assets/img/project-commerce.png',
-                'assets/img/Image_fx (10).png',
-                'assets/img/Image_fx (3).png',
-                'assets/img/Image_fx (4).png'
+                'assets/img/fagulha1.png',
+                'assets/img/fagulha2.png',
+                'assets/img/fagulha3.png',
+                'assets/img/fagulha4.png',
+                'assets/img/fagulha5.png',
+                'assets/img/fagulha6.png',
+                'assets/img/fagulha7.png'
             ],
-            description: 'Uma plataforma inovadora para gestão de ideias e inovação corporativa. O Fagulha permite que colaboradores submetam, votem e desenvolvam projetos internos, gamificando o processo de inovação. A interface foi desenhada para promover engajamento máximo.',
+            description: 'Uma plataforma inovadora para gestão de ideias. (Placeholder para futura atualização)',
+            overview: 'Uma plataforma inovadora para gestão de ideias e inovação corporativa.',
+            problem: 'Empresas muitas vezes perdem grandes ideias por falta de um canal estruturado para colaboradores compartilharem sugestões.',
+            solution: 'O Fagulha gamifica o processo de inovação, permitindo submissão, votação e desenvolvimento de projetos internos.',
+            features: [
+                'Gamificação e recompensas',
+                'Fluxo de aprovação customizável',
+                'Dashboard de métricas de inovação'
+            ],
             github: 'https://github.com/loombardo-99',
             live: '#'
         },
         'proj2': {
             title: 'Oniria',
             number: '02',
-            tags: ['Python', 'TensorFlow', 'OpenCV'],
+            tags: ['HTML/CSS/JS', 'Generative AI', 'API'],
             images: [
                 'assets/img/oniria.png',
-                'assets/img/oniria1.png',
+                'assets/img/oniria1.1.png',
                 'assets/img/oniria2.png',
-                'assets/img/oniria3.png'
+                'assets/img/oniria3.png',
+                'assets/img/oniria4.png',
+                'assets/img/oniria5.png',
+                'assets/img/oniria6.png',
+                'assets/img/oniria7.png',
+                'assets/img/oniria8.png'
             ],
-            description: 'Sistema de visão computacional para análise de sentimentos em tempo real em espaços públicos. Utiliza redes neurais profundas para processar fluxos de vídeo e gerar mapas de calor emocionais, auxiliando no planejamento urbano e segurança.',
+            description: '', // Legacy field kept for safety
+            overview: 'Uma plataforma que traduz as descrições dos sonhos dos usuários em arte visual gerada por IA.',
+            problem: 'Muitas pessoas têm dificuldade em visualizar ou lembrar de seus sonhos. A interpretação de sonhos é um campo complexo e muitas vezes inacessível.',
+            solution: 'O ONIRIA traduz descrições de sonhos em arte visual gerada por IA e oferece análise de símbolos para tornar a auto-reflexão mais acessível.',
+            features: [
+                'Geração de imagens a partir de descrições de sonhos',
+                'Análise de símbolos de sonhos com o Agente Oneiros',
+                'Galeria de sonhos da comunidade'
+            ],
             github: 'https://github.com/loombardo-99',
             live: 'https://loombardo-99.github.io/OnirIA/'
         },
         'proj3': {
             title: 'ERP Gestor Inteligente',
             number: '03',
-            tags: ['Three.js', 'Vue.js', 'Firebase'],
+            tags: ['PHP 8', 'MySQL', 'AI Gemini', 'Bootstrap 5'],
             images: [
-                'assets/img/project-erp.png',
-                'assets/img/Image_fx (12).png',
-                'assets/img/Image_fx (7).png',
-                'assets/img/Image_fx (8).png'
+                'assets/img/erp1.png',
+                'assets/img/erp2.png',
+                'assets/img/erp3.png',
+                'assets/img/erp4.png',
+                'assets/img/erp5.png',
+                'assets/img/erp6.png',
+                'assets/img/erp7.png',
+                'assets/img/erp8.png',
+                'assets/img/erp9.png',
+                'assets/img/erp10.png',
+                'assets/img/erp11.png',
+                'assets/img/erp12.png',
+                'assets/img/erp13.png',
+                'assets/img/erp14.png',
+                'assets/img/erp15.png',
+                'assets/img/erp16.png',
+                'assets/img/erp17.png',
+                'assets/img/erp18.png',
+                'assets/img/erp19.png',
+                'assets/img/erp20.png',
+                'assets/img/erp21.png',
+                'assets/img/erp22.png',
+                'assets/img/erp23.png',
+                'assets/img/erp24.png',
+                'assets/img/erp25.png',
+                'assets/img/erp26.png',
+                'assets/img/erp27.png',
+                'assets/img/erp28.png',
+                'assets/img/erp29.png',
+                'assets/img/erp30.png',
+                'assets/img/erp31.png',
+                'assets/img/erp32.png',
+                'assets/img/erp33.png',
+                'assets/img/erp34.png'
             ],
-            description: 'Um ERP completo e imersivo que redefiniu a gestão empresarial. Com visualizações de dados em 3D e uma interface inspirada em glassmorphism, torna a análise financeira e de estoque uma experiência visualmente rica e intuitiva.',
+            description: '', // Legacy
+            overview: 'Um sistema web de gerenciamento de estoque "Inteligente", focado em automação e análise de dados.',
+            problem: 'Pequenas e médias empresas enfrentam dificuldades no controle de estoque, perdas por vencimento e gestão financeira manual propensa a erros.',
+            solution: 'Uma plataforma centralizada que automatiza a leitura de notas fiscais, oferece insights financeiros em tempo real e integra IA para consultoria estratégica.',
+            features: [
+                'Dashboard Executivo com KPIs em tempo real',
+                'Assistente IA (Gemini) integrado',
+                'Automação de Compras (Leitura de NFs)',
+                'Gestão Financeira e de Estoque Completa'
+            ],
             github: 'https://github.com/loombardo-99',
             live: '#'
         }
@@ -335,26 +398,185 @@ document.addEventListener('DOMContentLoaded', () => {
     const mGithub = document.querySelector('.modal-link-code');
     const mLive = document.querySelector('.modal-link-live');
 
+    let currentSlideIndex = 0;
+    let totalSlides = 0;
+
+    function updateGallery() {
+        const track = document.querySelector('.gallery-track');
+        const dots = document.querySelectorAll('.gallery-dot');
+
+        if (track) {
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        }
+
+        if (dots) {
+            dots.forEach((dot, index) => {
+                if (index === currentSlideIndex) dot.classList.add('active');
+                else dot.classList.remove('active');
+            });
+        }
+    }
+
+    function nextSlide(e) {
+        if (e) e.stopPropagation();
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        updateGallery();
+    }
+
+    function prevSlide(e) {
+        if (e) e.stopPropagation();
+        currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+        updateGallery();
+    }
+
     function openModal(projectId) {
         const data = projectDetails[projectId];
         if (!data) return;
 
         mTitle.textContent = data.title;
         mNumber.textContent = data.number;
-        mDesc.textContent = data.description;
+
+        // Renderização Rica do Conteúdo
+        const overviewHtml = data.overview ? `<div class="modal-section"><p class="text-overview">${data.overview}</p></div>` : '';
+
+        const problemHtml = data.problem ? `
+            <div class="modal-section">
+                <h3 class="modal-section-title">O Desafio</h3>
+                <p class="modal-text">${data.problem}</p>
+            </div>` : '';
+
+        const solutionHtml = data.solution ? `
+            <div class="modal-section">
+                <h3 class="modal-section-title">A Solução</h3>
+                <p class="modal-text">${data.solution}</p>
+            </div>` : '';
+
+        const featuresHtml = (data.features && data.features.length) ? `
+            <div class="modal-section">
+                <h3 class="modal-section-title">Funcionalidades</h3>
+                <ul class="feature-list">
+                    ${data.features.map(f => `<li class="feature-item">${f}</li>`).join('')}
+                </ul>
+            </div>` : '';
+
+        // Injeta conteúdo rico no container da descrição
+        mDesc.innerHTML = overviewHtml + problemHtml + solutionHtml + featuresHtml;
+
         mGithub.href = data.github;
         mLive.href = data.live;
 
         mTags.innerHTML = data.tags.map(tag => `<span class="card-tags-span" style="display:inline-block; padding:0.5rem 1.5rem; border:1px solid rgba(255,255,255,0.2); border-radius:99px; margin-right:1rem; font-size:0.9rem;">${tag}</span>`).join('');
 
-        mGallery.innerHTML = '';
-        data.images.forEach(imgSrc => {
+        // ---------------------------------------------
+        // CONSTRUÇÃO DO SLIDESHOW (Carousel)
+        // ---------------------------------------------
+        mGallery.innerHTML = ''; // Limpa galeria anterior
+        currentSlideIndex = 0;
+        totalSlides = data.images.length;
+
+        // Container Principal
+        const sliderContainer = document.createElement('div');
+        sliderContainer.className = 'gallery-slider';
+
+        // Trilha que move
+        const track = document.createElement('div');
+        track.className = 'gallery-track';
+
+        // Criação dos Slides
+        data.images.forEach((imgSrc, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'gallery-slide';
+
             const img = document.createElement('img');
             img.src = imgSrc;
-            img.className = 'modal-img';
+            // img.className = 'modal-img'; // Não usamos mais essa classe para o layout grid
             img.alt = `Detalhe do projeto ${data.title}`;
-            mGallery.appendChild(img);
+
+            // Clique no centro abre lightbox (opcional, mantendo funcionalidade)
+            img.style.cursor = 'zoom-in';
+            img.style.pointerEvents = 'auto'; // Reabilita pointer events para o clique na imagem
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(imgSrc);
+            });
+
+            slide.appendChild(img);
+            track.appendChild(slide);
         });
+
+        sliderContainer.appendChild(track);
+
+        // Áreas de Navegação (Invisíveis)
+        const navLeft = document.createElement('div');
+        navLeft.className = 'nav-area nav-left';
+        navLeft.addEventListener('click', prevSlide);
+
+        const navRight = document.createElement('div');
+        navRight.className = 'nav-area nav-right';
+        navRight.addEventListener('click', nextSlide);
+
+        sliderContainer.appendChild(navLeft);
+        sliderContainer.appendChild(navRight);
+
+        // Botões de Navegação (Setas Visíveis)
+        const btnPrev = document.createElement('div');
+        btnPrev.className = 'gallery-nav-btn gallery-prev';
+        btnPrev.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+        btnPrev.addEventListener('click', prevSlide);
+
+        const btnNext = document.createElement('div');
+        btnNext.className = 'gallery-nav-btn gallery-next';
+        btnNext.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+        btnNext.addEventListener('click', nextSlide);
+
+        sliderContainer.appendChild(btnPrev);
+        sliderContainer.appendChild(btnNext);
+
+        // Paginação (Dots)
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'gallery-dots';
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = `gallery-dot ${i === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentSlideIndex = i;
+                updateGallery();
+            });
+            dotsContainer.appendChild(dot);
+        }
+
+        sliderContainer.appendChild(dotsContainer);
+
+        // Adiciona tudo ao DOM
+        mGallery.appendChild(sliderContainer);
+
+
+        // ---------------------------------------------
+        // SUPORTE A SWIPE (TOQUE)
+        // ---------------------------------------------
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const threshold = 50; // Mínimo de pixels para considerar swipe
+            if (touchStartX - touchEndX > threshold) {
+                nextSlide();
+            }
+            if (touchEndX - touchStartX > threshold) {
+                prevSlide();
+            }
+        }
 
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -366,8 +588,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     projectCards.forEach(card => {
+        const projectId = card.getAttribute('data-img');
+        const glass = card.querySelector('.card-glass');
+
+        // Injeção da Capa Dinâmica
+        if (projectDetails[projectId] && projectDetails[projectId].images.length > 0) {
+            const firstImage = projectDetails[projectId].images[0];
+
+            const bgWrapper = document.createElement('div');
+            bgWrapper.className = 'card-bg-wrapper';
+
+            const bgImg = document.createElement('img');
+            bgImg.src = firstImage;
+            bgImg.className = 'card-bg-img';
+            bgImg.alt = `Capa do projeto ${projectDetails[projectId].title}`;
+
+            bgWrapper.appendChild(bgImg);
+
+            // Insere como primeiro filho para ficar atrás
+            if (glass) glass.insertBefore(bgWrapper, glass.firstChild);
+        }
+
         card.addEventListener('click', () => {
-            const projectId = card.getAttribute('data-img');
+            // Re-query data just to be safe, though closure holds it
             openModal(projectId);
         });
     });
@@ -420,7 +663,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target !== lightboxImg) closeLightbox();
     });
 
-    // Delegação de eventos para imagens dentro do modal (pois são criadas dinamicamente)
+    // Delegação de eventos removida, pois agora tratamos diretamente na criação do slider
+    /*
     if (mGallery) {
         mGallery.addEventListener('click', (e) => {
             if (e.target.classList.contains('modal-img')) {
@@ -428,6 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    */
 
 
     // ---------------------------------------------
