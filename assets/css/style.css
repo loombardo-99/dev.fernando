@@ -1513,3 +1513,86 @@ h3 {
         right: 1rem;
     }
 }
+/* =========================================
+   CONTACT SECTION RESPONSIVENESS (Added)
+   ========================================= */
+
+/* Mobile First (Default) - Mantém comportamento atual mas limpo */
+.contact-grid {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .contact-grid {
+        max-width: 1400px; /* Largura total da grid estilo Google */
+        padding: 0 4rem;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr; /* Texto maior à esquerda, ações à direita */
+        align-items: center; /* Alinhamento vertical central */
+        text-align: left; /* Alinhamento de texto à esquerda */
+        gap: 6rem; /* Espaço generoso entre colunas */
+    }
+
+    /* Conteúdo de Texto (Esquerda) */
+    .contact-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .contact-info .display-title {
+        font-size: 5rem; /* Título maior no desktop */
+        line-height: 1.1;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info .text-lg {
+        max-width: 600px;
+        font-size: 1.25rem;
+    }
+
+    /* Ações (Direita) */
+    .contact-actions-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinhamento à esquerda da coluna da direita */
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 2rem;
+        border-left: 1px solid rgba(255,255,255,0.1); /* Separador sutil */
+    }
+
+    .contact-methods {
+        justify-content: flex-start;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .socials-list {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .copyright {
+        margin-top: 2rem;
+        text-align: left;
+    }
+}
+
